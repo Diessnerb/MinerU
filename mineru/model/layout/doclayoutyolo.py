@@ -48,7 +48,6 @@ class DocLayoutYOLOModel:
 
     def predict(self, image: Union[np.ndarray, Image.Image]) -> List[Dict]:
         prediction = self.model.predict(
-            image,
             imgsz=self.imgsz,
             conf=self.conf,
             iou=self.iou,
